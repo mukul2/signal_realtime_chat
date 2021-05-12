@@ -366,7 +366,7 @@ io.on('connection', function (client) {
   })
 })
 
-var server_port = process.env.PORT || 3001;
+var server_port = process.env.PORT || 443;
 server.listen(server_port, function (err) {
   if (err) throw err
   console.log('Listening on port %d', server_port);
