@@ -4,6 +4,7 @@ const server = require('http').createServer()
 const io = require('socket.io')(server, {
   cors: {
     origin: '*',
+    methods: ["GET", "POST"]
   }
 },{
   allowEIO3: true // false by default
@@ -373,7 +374,7 @@ io.on('connection', function (client) {
   })
 })
 
-var server_port = process.env.PORT || 3005;
+var server_port = process.env.PORT || 3000;
 server.listen(server_port, function (err) {
   if (err) throw err
   console.log('Listening on port %d', server_port);
